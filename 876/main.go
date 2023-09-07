@@ -46,6 +46,13 @@ func main() {
 	traverse(list)
 	fmt.Println(`result`)
 	traverse(middleNode(list))
+
+	x = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	list = initFrom(x)
+	fmt.Println(x)
+	traverse(list)
+	fmt.Println(`result`)
+	traverse(middleNode(list))
 }
 
 type ListNode struct {
@@ -78,16 +85,11 @@ func traverse(head *ListNode) {
 
 func middleNode(head *ListNode) *ListNode {
 
-	current := head
-	len := 0
-	for current != nil {
-		len++
-		current = current.Next
+	var fast = head
+	var slow = head
+	for fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
 	}
-
-	middle := len / 2
-	for i := 0; i < middle; i++ {
-		head = head.Next
-	}
-	return head
+	return slow
 }
