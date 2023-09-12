@@ -26,13 +26,13 @@ func canConstruct(ransomNote string, magazine string) bool {
 	if len(magazine) < len(ransomNote) {
 		return false
 	}
-	letters := make(map[rune]int)
-	for _, char := range magazine {
-		letters[char]++
+	letters := make(map[byte]int, 26)
+	for i := range magazine {
+		letters[magazine[i]]++
 	}
-	for _, char := range ransomNote {
-		letters[char]--
-		if letters[char] < 0 {
+	for i := range ransomNote {
+		letters[ransomNote[i]]--
+		if letters[ransomNote[i]] < 0 {
 			return false
 		}
 	}
