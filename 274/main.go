@@ -5,6 +5,7 @@ import (
 	"sort"
 )
 
+// https://leetcode.com/problems/h-index/
 func main() {
 
 	x := []int{3, 0, 6, 1, 5}
