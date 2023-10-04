@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// https://leetcode.com/problems/minimum-size-subarray-sum/
 func main() {
 	nums := []int{2, 3, 1, 2, 4, 3}
 	target := 7
