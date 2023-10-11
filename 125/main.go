@@ -21,10 +21,10 @@ func isPalindrome(s string) bool {
 
 	arr := []rune{}
 	for _, char := range s {
-		if char >= 65 && char <= 90 {
-			char += 32
+		if char >= 'A' && char <= 'Z' {
+			char += ' '
 		}
-		if (char >= 48 && char <= 57) || (char >= 97 && char <= 122) {
+		if (char >= '0' && char <= '9') || (char >= 'a' && char <= 'z') {
 			arr = append(arr, char)
 		}
 	}
