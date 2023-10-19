@@ -4,6 +4,7 @@ import (
 	"sort"
 )
 
+// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 func searchRange(nums []int, target int) []int {
 
 	if len(nums) == 0 {
